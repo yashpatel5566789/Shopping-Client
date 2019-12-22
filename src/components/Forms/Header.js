@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-
+import styled from "styled-components";
 import { AuthContext } from '../../context/auth';
+import Cart from "../Cart/Cart";
 
 function Header() {
   const { user, logout } = useContext(AuthContext);
@@ -19,10 +20,24 @@ function Header() {
 
       <Menu.Menu position="right">
         <Menu.Item name="logout" onClick={logout} />
+        <Menu.Item
+          name="Cart"
+          active={activeItem === 'Cart'}
+          onClick={handleItemClick}
+          as={Link}
+          to="/cart"
+        />
       </Menu.Menu>
     </Menu>
   ) : (
     <Menu pointing secondary size="massive" color="teal">
+      <Menu.Item
+          name="home"
+          active={activeItem === 'home'}
+          onClick={handleItemClick}
+          as={Link}
+          to="/"
+        />
       
 
       <Menu.Menu position="right">
@@ -39,6 +54,13 @@ function Header() {
           onClick={handleItemClick}
           as={Link}
           to="/register"
+        />
+        <Menu.Item
+          name="Cart"
+          active={activeItem === 'Cart'}
+          onClick={handleItemClick}
+          as={Link}
+          to="/cart"
         />
       </Menu.Menu>
     </Menu>
