@@ -15,15 +15,13 @@ import Cart from '../src/components/Cart/Cart';
 
 
 
-class App extends Component {
-  render() {
+function App() {
   return (
     <AuthProvider>
       <React.Fragment>
-      
+      <Router>
       <Switch>
         <Container>
-          
           <Header />
           <Route exact path="/" component={ProductList} />
           <Route exact path="/cart" component={Cart} />
@@ -32,11 +30,10 @@ class App extends Component {
 
         </Container>
         </Switch>
-      
+      </Router>
       </React.Fragment>
     </AuthProvider>
   );
-}
 }
 
 export default App;
