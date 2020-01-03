@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Product from "./Product";
-
 import { storeProducts } from "../data";
 import styled from "styled-components";
 import { ProductConsumer } from "../context";

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component }from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
 import Header from "./components/Forms/Header"
@@ -15,13 +15,15 @@ import Cart from '../src/components/Cart/Cart';
 
 
 
-function App() {
+class App extends Component {
+  render() {
   return (
     <AuthProvider>
       <React.Fragment>
-      <Router>
+      
       <Switch>
         <Container>
+          
           <Header />
           <Route exact path="/" component={ProductList} />
           <Route exact path="/cart" component={Cart} />
@@ -30,10 +32,11 @@ function App() {
 
         </Container>
         </Switch>
-      </Router>
+      
       </React.Fragment>
     </AuthProvider>
   );
+}
 }
 
 export default App;

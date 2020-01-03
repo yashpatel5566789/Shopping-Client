@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { AuthContext } from '../../context/auth';
 import Cart from "../Cart/Cart";
-
+{/* 
+https://www.iconfinder.com/icons/1243689/call_phone_icon
+Creative Commons (Attribution 3.0 Unported);
+https://www.iconfinder.com/Makoto_msk */}
 function Header() {
   const { user, logout } = useContext(AuthContext);
   const pathname = window.location.pathname;

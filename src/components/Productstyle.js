@@ -50,4 +50,10 @@ export const ProductWrapper = styled.div`
     color: var(--mainBlue);
     cursor: pointer;
   }
+
+
+  .p-5{
+    padding: 48px!important;
+
+  }
 `;
